@@ -8,3 +8,22 @@ body {
 h1 {
   color: #1e40af;
 }
+:root {
+  --color-error: light-dark(oklch(45% 0.2 25), oklch(75% 0.15 25));
+}
+
+.error {
+  display: block;
+  color: var(--color-error);
+}
+
+input[aria-invalid="true"] {
+  border-color: var(--color-error);
+}
+input,
+button {
+  padding: 12px;
+  border: 1px solid #000; /* Dark border for high contrast */
+  font-size: 16px;
+  min-height: 48px; /* Safe tap target size for mobile */
+}

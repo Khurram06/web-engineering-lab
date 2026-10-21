@@ -3,11 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Engineering Lab</title>
+    <title>Lab 05</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
-    <h1 id="greeting">Loading...</h1>
+    <main>
+      <form novalidate>
+        <h1>Send Feedback</h1>
+
+        <div class="field">
+          <!-- Label 'for' aur Input 'id' same hone chahiyein -->
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <!-- Button mein text clear hona chahiye -->
+        <button type="submit" aria-label="Submit Feedback">Submit</button>
+        <p id="status"></p>
+      </form>
+
+      <table id="schedule">
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>10:00–11:00</td>
+            <td>Room 214</td>
+            <td>
+              <button data-day="Monday" aria-label="Book Monday Slot">
+                Book
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>14:00–15:00</td>
+            <td>Room 214</td>
+            <td>
+              <button data-day="Wednesday" aria-label="Book Wednesday Slot">
+                Book
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <script type="module" src="main.js"></script>
+    <script type="module" src="feedback.js"></script>
   </body>
 </html>
